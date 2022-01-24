@@ -9,6 +9,7 @@ import (
 	"strings"
 )
 
+// Input loop
 func main() {
 	index := 0
 	var commands []string
@@ -29,6 +30,7 @@ func main() {
 	}
 }
 
+// Run the input command
 func executeInput(input string) error {
 	command := strings.TrimSuffix(input, "\n")
 	args := strings.Split(command, " ")
@@ -62,6 +64,7 @@ func executeInput(input string) error {
 	return result.Run()
 }
 
+//Room for custom commands
 func cow(wisdom string) error {
 	if len(wisdom) < 1 {
 		wisdom = "I don't know how to handle this"
